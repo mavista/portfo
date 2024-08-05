@@ -1,5 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 import csv
+#from flask_bootstrap import Bootstrap
+
 app = Flask(__name__)
 print(__name__)
 
@@ -38,3 +40,7 @@ def submit_form():
     		return 'did not save to database'
     else:
     	return 'something went wrong'
+		
+if __name__ == "__main__":
+    #Bootstrap(app)
+    app.run(host="0.0.0.0",port="5001", debug=True)
